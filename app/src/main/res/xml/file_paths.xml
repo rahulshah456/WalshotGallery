@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="my_images" path="Android/data/com.walshotbeta.walshotvbeta/files/Pictures" />
+    <external-path name="device_images" path="Walshot vBeta" />
+    <external-path name="images" path="." />
+</paths>

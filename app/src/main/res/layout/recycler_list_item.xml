@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/frameContainerID" android:layout_width="fill_parent" android:layout_height="300.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:cardUseCompatPadding="true">
+        <RelativeLayout android:background="@color/greyColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.flyco.labelview.LabelView android:id="@id/labelTextID" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4.0dip" app:lv_background_color="#fff44336" app:lv_text="Note 5 Pro" app:lv_text_size="10.0dip" />
+            <ImageView android:id="@id/image_thumbnail" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:transitionName="item_transition" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_dialog" android:layout_centerInParent="true" />
+            <RelativeLayout android:background="@color/light" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+                <ImageButton android:id="@id/heartButtonID" android:background="@drawable/ic_favorite_border_white_24dp" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginBottom="14.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="14.0dip" android:layout_alignParentStart="true" />
+                <TextView android:textSize="15.0dip" android:textStyle="italic" android:textColor="@color/White" android:gravity="center" android:id="@id/likesTextID" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 Likes" android:layout_alignBottom="@id/heartButtonID" android:layout_toEndOf="@id/heartButtonID" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

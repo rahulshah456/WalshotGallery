@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:orientation="vertical" android:id="@id/coordinator_layout_slide" android:background="@android:color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <agency.tango.materialintroscreen.widgets.OverScrollViewPager android:id="@id/view_pager_slides" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/navigation_view" android:paddingTop="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="agency.tango.materialintroscreen.MoveUpBehaviour">
+        <android.support.v7.widget.AppCompatButton android:theme="@style/ColoredButton" android:layout_gravity="bottom|center" android:id="@id/button_message" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/button_back" android:background="@drawable/button_background" android:padding="16.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_previous" />
+            <ImageButton android:id="@id/button_skip" android:background="@drawable/button_background" android:padding="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_skip" />
+            <agency.tango.materialintroscreen.widgets.InkPageIndicator android:layout_gravity="bottom" android:id="@id/indicator" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_weight="1.0" app:animationDuration="320" app:currentPageIndicatorColor="@android:color/white" app:dotDiameter="8.0dip" app:dotGap="8.0dip" app:pageIndicatorColor="@android:color/holo_red_light" />
+            <ImageButton android:id="@id/button_next" android:background="@drawable/button_background" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/ic_next" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

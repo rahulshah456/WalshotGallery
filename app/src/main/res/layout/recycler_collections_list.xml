@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/frameContainerID" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="300.0sp" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="6.0dip" android:elevation="40.0dip" app:cardCornerRadius="12.0dip">
+        <RelativeLayout android:background="@color/greyColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/image_thumbnail" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_dialog" android:layout_centerInParent="true" />
+            <android.support.v7.widget.CardView android:layout_width="wrap_content" android:layout_height="23.0dip" android:layout_marginTop="14.0dip" android:layout_alignParentTop="true" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" app:cardCornerRadius="12.0dip">
+                <RelativeLayout android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/imageView" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/wallpaper_icon" />
+                    <TextView android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/totalImagesID" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="One" android:layout_centerVertical="true" android:layout_toEndOf="@id/imageView" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <TextView android:textColor="@color/White" android:id="@id/collectionDescID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-33.0dip" android:text="By admin" android:singleLine="true" android:layout_below="@id/collectionTitleID" android:layout_alignStart="@id/collectionTitleID" />
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/White" android:id="@id/collectionTitleID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="33.0dip" android:text="Title" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_marginStart="82.0dip" android:layout_alignParentStart="true" />
+            <com.mikhaellopez.circularimageview.CircularImageView android:id="@id/userPicID" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/admin_icon" android:layout_alignBottom="@id/collectionDescID" android:layout_marginStart="19.0dip" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

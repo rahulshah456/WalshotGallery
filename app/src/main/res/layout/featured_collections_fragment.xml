@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipeRefreshID" android:background="@color/White" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/recyclerContainerID" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/images_recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+        <com.google.android.gms.ads.AdView android:id="@id/adViewID" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="BANNER" ads:adUnitId="ca-app-pub-8215970961458765/5444020991" xmlns:ads="http://schemas.android.com/apk/res-auto" />
+        <RelativeLayout android:id="@id/noConnectionLayoutID" android:visibility="gone" android:layout_width="250.0dip" android:layout_height="300.0dip" android:layout_marginBottom="119.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/no_connectionImageID" android:layout_width="250.0dip" android:layout_height="250.0dip" android:src="@drawable/no_connection" />
+            <TextView android:textStyle="bold" android:textColor="@color/black" android:id="@id/text_boldID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Internet Connection" android:layout_alignBottom="@id/no_connectionImageID" android:layout_centerHorizontal="true" android:textAllCaps="true" />
+            <TextView android:gravity="center" android:id="@id/text_lightID" android:layout_width="200.0dip" android:layout_height="wrap_content" android:text="Check your Internet Connection and Try Again" android:layout_below="@id/text_boldID" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="bottom" android:id="@id/loadingRecyclerID" android:background="#ff00e676" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="20.0sp" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+            <ProgressBar android:id="@id/progressBar" android:padding="2.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_dialog" android:layout_alignParentTop="true" android:layout_toStartOf="@id/loadingTextID" style="?android:progressBarStyle" />
+            <TextView android:textStyle="bold" android:id="@id/loadingTextID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

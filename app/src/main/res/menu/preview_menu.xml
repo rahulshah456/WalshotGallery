@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_favorite_border_white_24dp" android:id="@id/favourites_menuID" android:title="Favourites" app:showAsAction="always" />
+    <item android:id="@id/save_menuID" android:title="Save to device" />
+    <item android:id="@id/share_menuID" android:title="Share" />
+</menu>

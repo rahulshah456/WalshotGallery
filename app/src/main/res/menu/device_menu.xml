@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_favorite_border_white_24dp" android:id="@id/favourites_menuID" android:title="Favourites" app:showAsAction="always" />
+    <item android:id="@id/slideshow_menuID" android:title="Slideshow (Play/Pause)" />
+    <item android:id="@id/dailyShot_uploadID" android:title="DailyShot upload" />
+    <item android:id="@id/move_to_folderID" android:title="Move to Folder" />
+    <item android:id="@id/copy_to_folderID" android:title="Copy to Folder" />
+    <item android:id="@id/rotate_leftID" android:title="Rotate Left" />
+    <item android:id="@id/rotate_rightID" android:title="Rotate Right" />
+    <item android:id="@id/use_asID" android:title="Use as" />
+    <item android:id="@id/edit_inID" android:title="Edit in" />
+</menu>

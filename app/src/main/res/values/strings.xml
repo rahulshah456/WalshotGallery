@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Walshot</string>
+    <string name="can_not_play">can not play this video</string>
+    <string name="policy">"Welcome,Walshot is a free Gallery &amp; Wallpaper app , so you can set fresh new wallpapers daily. You can manage your device gallery and can also upload your daily beautiful device shots to our wallpaper community its free. Any upload of abusive content to the community can make your account to be blocked permanently. All wallpapers on our app are come under CC0 lisence agrement so you can edit &amp; distribute freely ,thank you."</string>
+    <string name="search_menu_title">Search</string>
+    <string name="small_problem">something error</string>
+    <string name="speak_now">Speak now</string>
+</resources>

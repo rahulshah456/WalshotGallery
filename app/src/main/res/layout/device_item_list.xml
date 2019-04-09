@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/frameContainerID" android:layout_width="fill_parent" android:layout_height="300.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:background="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:cardUseCompatPadding="true">
+        <RelativeLayout android:background="@color/greyColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.flyco.labelview.LabelView android:id="@id/labelTextID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4.0dip" app:lv_background_color="#fff44336" app:lv_text="Homescreen" app:lv_text_all_caps="true" app:lv_text_bold="true" app:lv_text_size="10.0dip" />
+            <ImageView android:id="@id/image_thumbnail" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_dialog" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

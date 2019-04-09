@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/search_root" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:id="@id/cardview_search" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="2.0dip" app:cardElevation="0.0dip" app:cardUseCompatPadding="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <org.cryse.widget.persistentsearch.HomeButton android:id="@id/button_home" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+            <org.cryse.widget.persistentsearch.LogoView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff212121" android:gravity="center_vertical" android:id="@id/logoview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="16.0dip" android:singleLine="true" android:layout_toLeftOf="@id/button_mic" android:layout_toRightOf="@id/button_home" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" android:layout_toStartOf="@id/button_mic" android:layout_toEndOf="@id/button_home" />
+            <EditText android:textColor="#ff212121" android:gravity="start|center" android:id="@id/edittext_search" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="16.0dip" android:ems="10" android:singleLine="true" android:layout_toLeftOf="@id/button_mic" android:layout_toRightOf="@id/button_home" android:imeOptions="actionSearch|flagNoExtractUi" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" android:layout_toStartOf="@id/button_mic" android:layout_toEndOf="@id/button_home">
+                <requestFocus />
+            </EditText>
+            <ImageView android:id="@id/button_mic" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_action_mic_black" android:scaleType="center" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <ListView android:id="@id/listview_suggestions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" />
+    </android.support.v7.widget.CardView>
+</merge>

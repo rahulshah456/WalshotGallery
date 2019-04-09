@@ -1,0 +1,157 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.walshotgallery">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="false" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:name=".CreativeApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.TransparentActionBar"/>
+        <activity android:name=".IntroActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Intro"/>
+        <activity android:name=".SettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CameraUpload" android:screenOrientation="portrait"/>
+        <activity android:name=".StorageUpload" android:screenOrientation="portrait"/>
+        <provider android:authorities="com.app.walshotgallery.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name=".LatestViewpagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".PopularViewpagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SearchViewpagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".WallCollectionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CollectionPagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SearchWallCollectionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SearchWallPagerActivity" android:screenOrientation="portrait"/>
+        <service android:label="File Download Service" android:name="util.FileDownloadService"/>
+        <activity android:name=".SetWallpaperActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".EditorsPagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".FireCollectionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".EditorsFirePagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyUploadActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MyUploadsPagerAcrivity" android:screenOrientation="portrait"/>
+        <activity android:name=".UserDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".UserDownloadsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".DownloadsPagerActivity" android:screenOrientation="portrait"/>
+        <receiver android:enabled="true" android:exported="true" android:name=".RandomWallpaper"/>
+        <activity android:name=".WallpaperPreview" android:screenOrientation="portrait"/>
+        <activity android:name=".RandomWallpaperActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".DailyPreviewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GalleryPagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".GalleryVideoActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize"
+            android:name=".AutoPlayActivity"/>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+        <activity android:name=".HiddenFoldersActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-8215970961458765~4792719695"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize"
+            android:finishOnTaskLaunch="true" android:name="com.adobe.creativesdk.aviary.AdobeImageEditorActivity"
+            android:screenOrientation="unspecified" android:theme="@style/AdobeImageBaseTheme.Editor">
+            <intent-filter>
+                <action android:name="aviary.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="aviary.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="aviary.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.adobe.creativesdk.aviary.internal.cds.CdsService" android:process=":editor">
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_VERIFY_SUBSCRIPTIONS"/>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_START"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_USER_ITEMS"/>
+                <action android:name="aviary.intent.action.CDS_RESTORE_OWNED_PACKS"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.adobe.creativesdk.aviary.internal.cds.CdsAssetsDownloaderService" android:process=":editor">
+            <intent-filter>
+                <action android:name="aviary.intent.action.CDS_DOWNLOAD_EXTRA_ASSETS"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.adobe.creativesdk.aviary.internal.cds.CdsReceiver" android:permission="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" android:process=":editor">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="aviary.android.cds.intent.action.ACTION_NOTIFICATION_DISMISS"/>
+                <action android:name="aviary.android.cds.intent.action.ACTION_DOWNLOAD_COMPLETE_DELAYED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.walshotbeta.walshotvbeta.CdsProvider" android:exported="false" android:name="com.adobe.creativesdk.aviary.internal.cds.CdsProvider"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:label="@string/adobe_csdk_creative_cloud" android:multiprocess="true" android:name="com.adobe.creativesdk.foundation.internal.auth.AdobeAuthSignInActivity" android:taskAffinity="" android:theme="@style/AdobeCSDKThemeActivity" android:windowSoftInputMode="adjustNothing|stateUnchanged"/>
+        <service android:enabled="true" android:exported="false" android:name="com.adobe.creativesdk.aviary.internal.account.AdobeBillingContentService" android:process=":editor"/>
+        <activity android:exported="false" android:label="@string/adobe_csdk_creative_cloud" android:launchMode="singleInstance" android:multiprocess="true" android:name="com.adobe.creativesdk.foundation.internal.auth.AdobeAuthContinuableEventActivity" android:theme="@style/AdobeCSDKThemeActivity" android:windowSoftInputMode="adjustNothing|stateUnchanged"/>
+        <activity android:name="com.adobe.creativesdk.foundation.internal.base.AdobeTOUHandlerActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="tcking.github.com.giraffeplayer2.PlayerActivity" android:screenOrientation="fullSensor"/>
+        <service android:name="tcking.github.com.giraffeplayer2.LazyLoadManager"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.walshotbeta.walshotvbeta.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

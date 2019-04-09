@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="com_adobe_image_editor_overlay_overlay_text_width">60.000004%p</fraction>
+    <fraction name="com_adobe_image_editor_overlay_stickers_text_width">39.999996%p</fraction>
+    <fraction name="com_adobe_image_editor_sticker_drag_scaleFactor">2.4999976%</fraction>
+</resources>

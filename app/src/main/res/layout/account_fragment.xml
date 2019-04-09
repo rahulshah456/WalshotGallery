@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@id/app_barID"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:animateLayoutChanges="true"
+            android:background="@color/White"
+            android:elevation="0.0dip">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    android:layout_marginBottom="8.0dip"
+                    android:text="My Account"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20.0sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/optionsButtonID"
+                    app:layout_constraintHorizontal_bias="0.088"
+                    app:layout_constraintStart_toEndOf="@id/hamButtonID"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.538" />
+
+                <ImageButton
+                    android:id="@id/hamButtonID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginBottom="8.0dip"
+                    android:background="@drawable/ic_menu_black_24dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@id/optionsButtonID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    android:layout_marginBottom="8.0dip"
+                    android:background="@drawable/ic_more_vert_white_24dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </RelativeLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@id/accountUI"
+            android:layout_width="fill_parent"
+            android:layout_height="220.0dip"
+            android:layout_below="@id/app_barID"
+            android:background="@color/White"
+            android:clickable="true"
+            android:elevation="0.0dip"
+            android:foreground="?selectableItemBackground">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@id/profilePicID"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:src="@drawable/account_icon"
+                app:layout_constraintBottom_toTopOf="@id/profileNameID"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@id/profileNameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="36.0dip"
+                android:text="Walshot User"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24.0dip"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@id/statusLayoutID"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_below="@id/accountUI"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorPrimary">
+
+            <View
+                android:layout_width="0.20000005dip"
+                android:layout_height="60.0dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/White" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25.0dip"
+                android:src="@drawable/download_icon_white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="128.0dip"
+                android:src="@drawable/upload_icon_white" />
+
+            <TextView
+                android:id="@id/myDownloadsTextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="97.0dip"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="24.0dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@id/myUploadsTextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="65.0dip"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="24.0dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="287.0dip"
+            android:layout_below="@id/statusLayoutID"
+            android:layout_alignParentStart="true">
+
+            <android.support.v7.widget.CardView
+                android:id="@id/downloadsCardID"
+                android:layout_width="150.0dip"
+                android:layout_height="100.0dip"
+                android:layout_alignTop="@id/favouritesCardID"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="28.0dip"
+                android:layout_marginTop="28.0dip"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="12.0dip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/download_icon" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@id/favouritesCardID"
+                android:layout_width="150.0dip"
+                android:layout_height="100.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="28.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="12.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/downloadsCardID"
+                app:layout_constraintVertical_bias="0.511">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/favourites_icon" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@id/deviceCardID"
+                android:layout_width="150.0dip"
+                android:layout_height="100.0dip"
+                android:layout_alignStart="@id/favouritesCardID"
+                android:layout_alignTop="@id/uploadCardID"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="12.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/favouritesCardID"
+                app:layout_constraintTop_toBottomOf="@id/uploadCardID">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/customize_deviceicon" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@id/uploadCardID"
+                android:layout_width="150.0dip"
+                android:layout_height="100.0dip"
+                android:layout_alignStart="@id/downloadsCardID"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="28.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                app:cardCornerRadius="12.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/downloadsCardID"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/upload_icon" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</FrameLayout>

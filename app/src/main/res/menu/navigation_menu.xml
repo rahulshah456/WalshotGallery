@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/nav_groupID" android:checkableBehavior="single">
+        <item android:icon="@drawable/gallery_black_24dp" android:id="@id/nav_galleryID" android:title="My Gallery" />
+    </group>
+    <group android:id="@id/nav_group1ID" android:checkableBehavior="single">
+        <item android:icon="@drawable/wallpaperr_black_24dp" android:id="@id/nav_WallpapersID" android:title="Wallpapers" />
+        <item android:icon="@drawable/ic_collections_black_24dp" android:id="@id/nav_collectionsID" android:title="Collections" />
+        <item android:icon="@drawable/camera_24dp" android:id="@id/nav_dailyShotsID" android:title="Daily Shots" />
+    </group>
+    <group android:id="@id/nav_group2ID" android:checkableBehavior="single">
+        <item android:icon="@drawable/ic_account_circle_black_24dp" android:id="@id/nav_accountID" android:title="My Account" />
+        <item android:icon="@drawable/ic_info_black_24dp" android:id="@id/nav_aboutUsID" android:title="About" />
+    </group>
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_allow_stacked_button_bar">false</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="com_adobe_image_editor_crop_invert_policy">true</bool>
+    <bool name="com_adobe_image_editor_draw_has_eraser">true</bool>
+    <bool name="com_adobe_image_editor_draw_panels_use_palette">true</bool>
+    <bool name="com_adobe_image_editor_meme_stroke_enabled">true</bool>
+    <bool name="com_adobe_image_editor_orientation_free_rotate">true</bool>
+    <bool name="com_adobe_image_editor_orientation_use_3d">false</bool>
+    <bool name="com_adobe_image_editori_text_stroke_enabled">false</bool>
+    <bool name="com_adobe_image_is_landscape">false</bool>
+    <bool name="com_adobe_image_is_tablet">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+</resources>

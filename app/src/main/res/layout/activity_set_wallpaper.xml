@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.isseiaoki.simplecropview.CropImageView android:id="@id/cropView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:scv_background_color="#ff263238" app:scv_crop_mode="fit_image" app:scv_frame_color="#ffffffff" app:scv_frame_stroke_weight="1.0dip" app:scv_guide_show_mode="not_show" app:scv_guide_stroke_weight="1.0dip" app:scv_handle_show_mode="not_show" app:scv_handle_size="14.0dip" app:scv_min_frame_size="50.0dip" app:scv_overlay_color="#99263238" app:scv_touch_padding="8.0dip" />
+    <android.support.v7.widget.Toolbar android:theme="@style/Base.ThemeOverlay.AppCompat.Dark" android:id="@id/wallpaperToolbarID" android:background="@color/light" android:layout_width="fill_parent" android:layout_height="80.0dip" android:minHeight="?actionBarSize" />
+    <RelativeLayout android:id="@id/wallpaperInterfaceID" android:background="@color/light" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <ImageButton android:id="@id/squareID" android:background="@drawable/scrollable" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerVertical="true" android:layout_marginStart="135.0dip" android:layout_alignParentStart="true" />
+        <ImageButton android:id="@id/leftID" android:background="@drawable/rotate_left" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_centerVertical="true" android:layout_marginStart="56.0dip" android:layout_alignParentStart="true" />
+        <ImageButton android:id="@id/rightID" android:background="@drawable/rotate_right" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignTop="@id/leftID" android:layout_marginEnd="48.0dip" android:layout_alignParentEnd="true" />
+        <ImageButton android:id="@id/rectID" android:background="@drawable/fixed" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerVertical="true" android:layout_marginEnd="120.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

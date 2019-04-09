@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView android:id="@id/card_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" android:elevation="12.0dip" card_view:cardCornerRadius="12.0dip">
+        <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/mainLayoutID" android:layout_width="fill_parent" android:layout_height="200.0dip">
+                <ImageView android:id="@id/autoplayVideoID" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionName="autoPlay" />
+                <ImageButton android:layout_gravity="bottom|center|right" android:id="@id/playVideoID" android:background="@drawable/player" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_below="@id/mainLayoutID">
+                <TextView android:gravity="center" android:id="@id/videoNameID" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="Sample Video" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
