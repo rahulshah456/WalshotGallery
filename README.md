@@ -8,4 +8,18 @@ Added some extra features to hide folders or delete Folders.
 ![alt text](https://github.com/rahulshah456/WalshotGallery/blob/master/Screenshots/shot_2.png)
 ![alt text](https://github.com/rahulshah456/WalshotGallery/blob/master/Screenshots/shot_3.png)
 
+# Permissions
+- Storage Read Write
+- Camera Usage
+- Network Config
+- Internet Connrction
+- Notification Access
+- Wallpaper Intent
+
+# Library Used
+- Glide
+- Adobe Aviary
+- Retrofit
+- Unsplash Api
+- Gson Converter
 
